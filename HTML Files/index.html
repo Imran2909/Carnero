@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <style>
+        #nav{
+            border: 1px solid red;
+            height: 110px;
+            display: flex;
+        }
+        #logo>a>img{
+            height: 100px;
+        }
+        #nav>div{
+            height: 110px;
+        }
+        #loc>img{
+            height: 40px;
+        }
+        #search{
+            width: 300px;
+        }
+        #ser{
+            width: 30px;
+            margin: 0px 0px 0px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <div id="logo">
+            <a href=""><img src="/Carnero.png" alt=""></a>
+        </div>
+        <div id="loc">
+            <img src="https://img.freepik.com/premium-vector/pin-symbol-indicates-location-gps-map_68708-398.jpg" alt="">
+            <select name="Please select your location" id="">
+            <option value="">select location</option>
+            <option value="">PUNE</option>
+            <option value="">MUMBAI</option>
+            <option value="">DELHI</option>
+            <option value="">BANGLORE</option>
+            <option value="">HYDRABAD</option>
+            <option value="">CHENNAI</option>
+            <option value="">NASHIK</option>
+            <option value="">NAGPUR</option>
+            <option value="">GOA</option>
+            <option value="">SOLAPUR</option>
+            <option value="">KOLKATA</option>
+        </select>
+        </div>
+        <div id="search">
+            <input type="text" placeholder="Search for any delicious product" id="search">
+            <img id="ser" src="https://www.licious.in/img/rebranding/search_icon.svg" alt="">
+        </div>
+        <div id="cat">
+            <img src="https://www.licious.in/img/rebranding/category-dropdown-icon.svg" alt="">
+            <p>Categories</p>
+        </div>
+        <div id="cart">
+             <img src="https://www.licious.in/img/rebranding/cart_icon.svg" alt="">
+             <p>Cart</p>
+             <p>cfvgkhg</p>
+        </div>
+    </div>
+
+    <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="https://d2407na1z3fc0t.cloudfront.net/Slider/banner_63630e9d6ba0e" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://images.moneycontrol.com/static-mcnews/2022/06/Licious-New-Packaging.jpg?impolicy=website&width=1600&height=900" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlxpq47diuKu9opu5VSHvi1_J-f4N5ngqYIA&usqp=CAU" class="d-block w-100" alt="...">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+</body>
+</html>
