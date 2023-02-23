@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="../CSS Files/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <style>
+        #box {
+            border-top: 2px solid rgb(255, 0, 0);
+            height: auto;
+            margin-top: 31px;
+        }
+
+        #box>img {
+            width: 100%;
+            height: 100%;
+        }
+
+        #data {
+            /* border: 1px solid rgb(126, 123, 123); */
+            border-radius: 12px;
+            width: 400px;
+            height: auto;
+            margin: auto;
+            margin-top: 40px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding: 20px;
+            margin-bottom: 80px;
+        }
+        #data>h4{
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+        #form>input:nth-child(1){
+            /* margin: 0px 0px -3px 0px; */
+        }
+        #form>input{
+            border: none;
+            border-bottom: 2px solid rgb(53, 52, 52);
+            width: 99%;
+            margin-bottom: 10px;
+        }
+        #butn{
+            border: none;
+            margin-top: 10px;
+            border-radius: 4px;
+            height: 2em;
+            background-color: aqua;
+            width: 99%;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 40px;
+        }
+        #form>p{
+            margin-top: 0px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        #login {
+            /* border: 1px solid rgb(126, 123, 123); */
+            border-radius: 12px;
+            width: 400px;
+            height: auto;
+            margin: auto;
+            margin-top: 40px;
+            box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+            padding: 20px;
+            margin-bottom: 80px;
+        }
+        #login>h4{
+            margin-top: 10px;
+            margin-bottom: 40px;
+        }
+        #login>input:nth-child(1){
+            /* margin: 0px 0px -3px 0px; */
+        }
+        #login>input{
+            border: none;
+            border-bottom: 2px solid rgb(53, 52, 52);
+            width: 99%;
+            margin-bottom: 10px;
+        }
+        #butn{
+            border: none;
+            margin-top: 10px;
+            border-radius: 4px;
+            height: 2em;
+            background-color: aqua;
+            width: 99%;
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+            margin-bottom: 40px;
+        }
+        #login>p{
+            margin-top: 0px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        #login{
+            display: none;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div id="nav">
+        <div id="logo">
+            <a href="index.html"><img src="/Carnero.png" alt=""></a>
+        </div>
+        <div id="loc">
+            <img src="https://img.freepik.com/premium-vector/pin-symbol-indicates-location-gps-map_68708-398.jpg"
+                alt="">
+            <select name="Please select your location" id="city">
+                <option value="">select location</option>
+                <option value="">PUNE</option>
+                <option value="">MUMBAI</option>
+                <option value="">DELHI</option>
+                <option value="">BANGLORE</option>
+                <option value="">HYDRABAD</option>
+                <option value="">CHENNAI</option>
+                <option value="">NASHIK</option>
+                <option value="">NAGPUR</option>
+                <option value="">GOA</option>
+                <option value="">SOLAPUR</option>
+                <option value="">KOLKATA</option>
+            </select>
+        </div>
+        <div id="search">
+            <input type="text" placeholder="Search for any delicious product" id="search">
+            <img id="ser" src="https://www.licious.in/img/rebranding/search_icon.svg" alt="">
+        </div>
+        <div id="cat">
+            <img src="https://www.licious.in/img/rebranding/category-dropdown-icon.svg" alt="">
+            <p>Categories</p>
+        </div>
+        <div id="name">
+            <img src="https://www.licious.in/img/rebranding/profile_icon.svg" alt="">
+            <p id="psc">SignUp/Login</p>
+        </div>
+        <div id="cart">
+            <div>
+                <img src="https://www.licious.in/img/rebranding/cart_icon.svg" alt="">
+                <p id="car">Cart</p>
+                <p id="price"></p>
+            </div>
+        </div>
+    </div>
+
+    <div id="box">
+
+        <!-- <img src="https://thumbs.dreamstime.com/z/carnivore-protein-diet-background-carnivore-diet-background-non-vegan-protein-sources-different-meat-food-chicken-breast-pork-156480791.jpg" alt=""> -->
+
+        <div id="data">
+            <h4>Sign Up </h4>
+            <form action="" id="form">
+                <input type="text" placeholder="Please Enter Your Name" id="nmae"><br><br>
+                <input type="text" placeholder="Please Enter Your Number" id="number"><br><br>
+                <input type="text" placeholder="Please Enter Your Email" id="email"><br><br>
+                <input type="text" placeholder="Please Enter Your Password" id="pass"><br><br>
+                <button type="submit" id="butn">Sign Up</button>
+                <p>Already have an acoount <a href="" id="swap">Login</a></p>
+            </form>
+        </div>
+        <div id="login">
+            <h4>Log In </h4>
+            <form action="" id="form">
+                <input type="text" placeholder="Please Enter Your Email" id="email"><br><br>
+                <input type="text" placeholder="Please Enter Your Password" id="pass"><br><br>
+                <button type="submit" id="butn">Log In</button>
+            </form>
+        </div>
+
+    </div>
+
+    <div id="footer">
+        <div id="ety">
+            <div id="llogo">
+                <a href="index.html"><img style="width: 130px;" src="/Carnero.png" alt=""></a>
+                <hr id="line">
+            </div>
+            <div id="links">
+                <div id="useful">
+                    <p>USEFUL LINKS</p>
+                    <p>Why Carnero?</p>
+                    <p>Refer & Earn</p>
+                    <p>Carnero Cash & Cash+</p>
+                    <p>Careers</p>
+                    <p>BLOG</p>
+                    <p>Campaign</p>
+                    <p>Bug Bounty Guidelines</p>
+                    <p>About US</p>
+                    <p>FSSC 22000 Certification</p>
+                    <p>FSSAI Liscence</p>
+                    <p>SA8000 Certification</p>
+                    <p>Sitemap</p>
+                </div>
+                <div id="exp">
+                    <p>EXPERIENCE CARNERO APP ON MOBILE</p>
+                    <div id="dwn">
+                        <img src="https://www.licious.in/img/rebranding/app-store-new.svg" alt="">
+                        <img src="https://www.licious.in/img/rebranding/play-store-new.png" alt="">
+                    </div>
+                    <div id="keep">
+                        <h6>KEEP IN TOUCH</h6>
+                        <img src="https://www.licious.in/img/rebranding/insta_color.png" alt="">
+                        <img src="https://www.licious.in/img/rebranding/fb_color.png" alt="">
+                        <img src="https://www.licious.in/img/rebranding/twitter_color.png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div id="contact">
+                <div>
+                    <h6>CONTACT US</h6>
+                    <P>Call: 1800-4190-786 <br>
+                        Talktous@licious.com</P> <br>
+                    <h6>REGISTERED OFFICE ADDRESS:
+                    </h6>
+                    <p>House of Licious, Zed Pearl, No 12, Domlur Layout <br>
+                        Bangalore, Karnataka - 560071</p>
+                    <img src="https://www.licious.in/img/rebranding/3-dsecure.png" alt="">
+                </div>
+                <div>
+                    <p>T&C <br>
+                        FAQ <br>
+                        Privacy Policy</p>
+                    <br>
+                    <h6>HAVE SECURITY CONCERN?
+                    </h6>
+                    <p>Mail us to: <br> security@licious.com</p>
+                </div>
+            </div>
+            <div id="cities">
+                <h5>Cities we serve</h5>
+                <hr>
+                <p>Bengaluru &nbsp; | &nbsp; NCR &nbsp; | &nbsp; Hyderabad &nbsp; | &nbsp; Chandigarh &nbsp; | &nbsp;
+                    Panchkula &nbsp; | &nbsp; Mohali &nbsp; | &nbsp; Mumbai &nbsp; | &nbsp; Pune &nbsp; | &nbsp; Chennai
+                    &nbsp; | &nbsp; Coimbatore &nbsp; | &nbsp; Jaipur &nbsp; | &nbsp; Cochin <br>
+                    Vijayawada &nbsp; | &nbsp; Visakhapatnam &nbsp; | &nbsp; Kolkata &nbsp; | &nbsp; Lucknow &nbsp; |
+                    &nbsp; Kanpur &nbsp; | &nbsp; Nagpur</p>
+            </div>
+            <div id="serc">
+                <h5>POPULAR SEARCHES</h5>
+                <hr id="fs">
+                <h6>CHICKEN</h6>
+                <p>Chicken Breast (Boneless)</p>
+                <hr>
+                <h6>MUTTON</h6>
+                <p>Premium Lamb Curry Cut</p>
+                <hr>
+                <h6>FISH & SEAFOOD</h6>
+                <p>Freshwater Rohu - Bengali Cut (Without Head) &nbsp; | &nbsp; Atlantic Salmon Fillet</p>
+                <hr>
+                <h6>MUTTON</h6>
+                <p>Premium Lamb Curry Cut</p>
+                <hr>
+                <h6>MEAT MASALA</h6>
+                <p>Asli Garam Masala &nbsp; | &nbsp; Original Tandoori Chicken Masala &nbsp; | &nbsp; Shandaar Butter
+                    Chicken Masala &nbsp; | &nbsp; Khansama Biryani Masala &nbsp; | &nbsp; Classic Chicken Masala &nbsp;
+                    | &nbsp; Classic Meat Masala &nbsp; | &nbsp; Chatpata Fish Fry Masala &nbsp; | &nbsp; Dakshin Pepper
+                    Fry Masala</p>
+                <hr>
+                <div id="last">
+                    <h6>2023 Delightful Gourmet Pvt Ltd. All Rights Reserved.</h6>
+                    <p>
+                        Licious is your one-stop fresh meat delivery shop. In here, you get nothing but the freshest
+                        meat & seafood, delivered straight to your doorstep. Now you can buy meat online anytime at your
+                        convenience. Indulge in our diverse selection: Chicken, Mutton, Seafood (Fish, Prawns, Crabs),
+                        Marinades & Cold Cuts. All our products are completely natural and healthy. Once you've
+                        experienced Licious, you'll never go back to the old way of buying meat and seafood.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
+<script>
+
+document.getElementById("swap").addEventListener("click",(rv)=>{
+    rv.preventDefault()
+    // document.getElementById("data").style.backgroundColor="pink";
+    document.getElementById("data").style.display="none";
+    document.getElementById("login").style.display="block";
+
+    
+})
+
+
+
+</script>
