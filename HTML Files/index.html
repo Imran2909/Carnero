@@ -344,7 +344,13 @@
 
    let login= document.getElementById("name")
    login.addEventListener("click",()=>{
-    swal("Good job!", "You clicked the button!", "warning");
+    swal("Please login/Signup first!", " ", "warning");
+    window.location.assign("Login.html")
+   })
+
+   document.body.addEventListener("click", async(re)=>{
+    re.preventDefault()
+    await swal("Please login/Signup first!", " ", "warning");
     window.location.assign("Login.html")
    })
 
