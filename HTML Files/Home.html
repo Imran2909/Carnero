@@ -44,7 +44,7 @@
         </div>
         <div id="name">
             <img src="https://www.licious.in/img/rebranding/profile_icon.svg" alt="">
-            <p>SignUp/Login</p>
+            <p id="vals">SignUp/Login</p>
         </div>
         <div id="cart">
             <div>
@@ -337,11 +337,20 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
         <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-        <script src="/JS Files/Home.js"></script>
         
 </body>
 </html>
+<script>
 
+    let mail= localStorage.getItem("mel")
+    document.getElementById("vals").innerText=mail
+
+    let login= document.getElementById("name")
+   login.addEventListener("click",()=>{
+    swal("Please login/Signup first!", " ", "warning");
+    window.location.assign("Login.html")
+   })
+</script>
 
 
 
