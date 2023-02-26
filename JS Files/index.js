@@ -2,8 +2,9 @@ const express = require("express")
 const { connection } = require("./db")
 const { userRoute } = require("./Routes/userroutes")
 const { productroute } = require("./Routes/productroute")
-const { authentication }= require("./Middleware/middleware")
-const cors= require("cors")
+const { cartRoute } = require("./Routes/cartroute")
+const { authentication } = require("./Middleware/middleware")
+const cors = require("cors")
 const app = express()
 app.use(cors())
 app.use(express.json())
@@ -12,8 +13,8 @@ app.get("/", (req, res) => {
 })
 
 app.use("/prod", productroute)
-app.use(cors())
 
+app.use("/cartes" , cartRoute)
 app.use("/user", userRoute)
 app.use(authentication)
 

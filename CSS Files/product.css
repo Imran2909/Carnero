@@ -1,0 +1,81 @@
+
+#funs {
+    border-top: 2px solid red;
+    margin-top: 31px;
+    /* height: 1000px; */
+}
+
+#top {
+    /* border: 1px solid black; */
+    height: 70px;
+    margin: 40px 0px 0px 600px;
+}
+
+#cont {
+    /* border: 1px solid black; */
+    width: 86%;
+    height: auto;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 40px;
+    column-gap: 20px;
+}
+
+#cont>div {
+    /* border: 1px solid red; */
+    height: 450px;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+
+#cont>div>img {
+    width: 106%;
+    margin-top: -20px;
+    margin-left: -20px;
+    margin-bottom: 20px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+#secp {
+    font-weight: 500;
+    font-size: 14px;
+    color: rgb(56, 56, 56);
+}
+
+#cont>div {
+    padding: 20px 0px 20px 20px;
+}
+
+#fsp {
+    margin-top: 30px;
+    font-size: 14px;
+    margin-bottom: 4px;
+}
+
+#cont>div>h5 {
+    color: red;
+    display: inline;
+}
+
+#cont>div>button {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #fff;
+    border: none;
+    padding: 10px 12px;
+    cursor: pointer;
+    font-weight: 600;
+    border-radius: 5px;
+    background-color: rgb(201, 5, 5);
+    height: 36px;
+    width: 100px;
+    margin: -35px 45px 0px 205px;
+    padding-top: -20px;
+    display: block;
+}
+
+#footer {
+    margin-top: 60px;
+}

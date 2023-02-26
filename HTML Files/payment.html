@@ -1,15 +1,91 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cornero</title>
     <link rel="stylesheet" href="../CSS Files/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="/CSS Files/login.css">
+    <link rel="stylesheet" href="../CSS Files/product.css">
+    <link rel="stylesheet" href="../CSS Files/payment.css">
+    <style>
+        #total {
+            /* border: 1px solid red; */
+            height: 100px;
+            width: 56%;
+            margin: auto;
+            margin-bottom: 40px;
+            margin-top: -20px;
+            position: sticky;
+            top: 20px;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.089);
+            display: flex;
+            justify-content: space-evenly;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+        }
+
+        #total>h5 {
+            margin-top: 35px;
+        }
+
+        #total>button {
+            font-size: 21px;
+            text-transform: uppercase;
+            color: #fff;
+            border: none;
+            padding: 10px 12px;
+            cursor: pointer;
+            font-weight: 600;
+            border-radius: 5px;
+            background-color: rgb(201, 5, 5);
+            height: 56px;
+            width: 300px;
+            display: block;
+            margin-top: 20px;
+        }
+
+        #cost {
+            color: red;
+        }
+
+        #qty {
+            margin: -25px 0px 0px 140px;
+            color: rgb(255, 0, 0);
+            font-weight: 600;
+        }
+
+        form {
+            display: none;
+        }
+
+        form {
+            /* border: 1px solid red; */
+            width: auto;
+        }
+
+        form>input {
+            border: 1px solid;
+            margin-top: 4px;
+            text-align: center;
+            /* height: 22px; */
+            padding: -1px;
+        }
+
+        form>input:nth-child(1) {
+            margin-bottom: -30px;
+        }
+
+        #last {
+            margin-top: 16px;
+        }
+
+        #put {
+            height: 22px;
+        }
+    </style>
 </head>
 
 <body>
@@ -46,48 +122,51 @@
         </div>
         <div id="name">
             <img src="https://www.licious.in/img/rebranding/profile_icon.svg" alt="">
-            <p id="psc">SignUp/Login</p>
+            <p id="pes"> SignUp/Login</p>
         </div>
         <div id="cart">
             <div>
                 <img src="https://www.licious.in/img/rebranding/cart_icon.svg" alt="">
-                <p id="car" >Cart</p>
+                <p id="car" style="margin-top: 6px;">Cart</p>
                 <p id="price"></p>
             </div>
         </div>
     </div>
 
-    <div id="box">
 
-        <!-- <img src="https://thumbs.dreamstime.com/z/carnivore-protein-diet-background-carnivore-diet-background-non-vegan-protein-sources-different-meat-food-chicken-breast-pork-156480791.jpg" alt=""> -->
+    <div id="funs" style="margin-bottom: 60px;">
 
-        <div id="data">
-            <h4>Sign Up </h4>
-            <form action="" id="form">
-                <input type="text" placeholder="Please Enter Your Name" id="nmae"><br><br>
-                <input type="text" placeholder="Please Enter Your Number" id="number"><br><br>
-                <input type="email" placeholder="Please Enter Your Email" id="email"><br><br>
-                <input type="text" placeholder="Please Enter Your Password" id="pass"><br><br>
-                <button type="submit" id="butn">Sign Up</button>
-                <p>Already have an acoount <a href="" id="swap">Login</a></p>
-            </form>
-        </div>
-        <div id="login">
-            <h4>Log In </h4>
-            <form action="" id="form">
-                <input type="email" placeholder="Please Enter Your Email" id="emails"><br><br>
-                <input type="text" placeholder="Please Enter Your Password" id="pass"><br><br>
-                <button type="submit" id="secs">Log In</button>
-                <p> Have to Sign Up Go to  <a href="" id="swap">Sign Up</a></p>
-            </form>
+    </div>
+
+    <div id="mid" style="height: auto;">
+        <h4>PAYMENT</h4>
+        <div id="btns" style="display: flex; flex-direction: column; margin-left: 20px; margin-bottom: 30px;">
+            <a href=""><button id="fbb" style="width:509px ;">Pay On Delivery</button></a>
+            <p style="margin: 20px 0px -2px -10px;">OR</p>
+            <a href=""><button id="gol" style="width: 507px; margin-left: 12px;">&nbsp&nbsp&nbsp PAY ONLINE
+                    &nbsp&nbsp&nbsp&nbsp</button></a>
         </div>
 
+        <form action="">
+            <input type="number" placeholder="Card No." id="fist" class="put"
+                style="height: 32px; width: 350px; border-radius: 4px;"><br>
+            <input type="text" placeholder="Card Holder Name" id="last"
+                style="height: 32px; width: 350px; border-radius: 4px;"><br>
+            <input type="number" placeholder="CVV" id="mail"
+                style="height: 32px; width: 350px; border-radius: 4px;"><br>
+            <input type="number" placeholder="Expiry Date" id="user"
+                style="height: 32px; width: 350px; border-radius: 4px;"><br>
+            <input type="checkbox" id="chb">
+            <p id="pc">I agree to the Hirexpert's all terms of service and privacy policy
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</p><br>
+            <input type="submit" id="join" value="PAY">
+        </form>
     </div>
 
     <div id="footer">
         <div id="ety">
             <div id="llogo">
-                <a href="index.html"><img style="width: 130px;" src="/Carnero.png" alt=""></a>
+                <img id="fotimg" src="/Carnero.png" alt="">
                 <hr id="line">
             </div>
             <div id="links">
@@ -184,19 +263,36 @@
         </div>
     </div>
 
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
-<script src="/JS Files/login.js"></script>
+
 <script>
-    document.getElementById("secs").addEventListener("click",async(re)=>{
-        re.preventDefault()
-        let val= await document.getElementById("emails").value;
-        localStorage.setItem("mel",val)
-        window.location.assign("Home.html")
+
+    document.querySelector("#fbb").addEventListener("click", () => {
+        alert("Purchased Completed")
     })
+
+    document.querySelector("#gol").addEventListener("click", (res) => {
+        res.preventDefault()
+        document.querySelector("form").style.display = "block"
+    })
+
+    document.getElementById("join").addEventListener("click", () => {
+        let a1 = document.getElementById("fist").value
+        let a2 = document.getElementById("last").value
+        let a3 = document.getElementById("mail").value
+        let a4 = document.getElementById("user").value
+
+        if (a1 !== "" && a2 !== "" && a3 !== "" && a4 !== "") {
+            alert("Payment successful")
+            window.location.assign(Home.html)
+        }
+        else{
+            alert("Please fill all card details")
+        }
+
+
+    })
+
 </script>

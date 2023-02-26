@@ -25,6 +25,36 @@ productroute.get("/all",async(req,res)=>{
     }
 })
 
+productroute.get("/asce",async(req,res)=>{
+    try {
+    const data= await productModel.find().sort({price: -1})
+    res.send(data)
+    } catch (error) {
+        res.send(error)
+    }
+})
+
+productroute.get("/desc",async(req,res)=>{
+    try {
+    const data= await productModel.find().sort({price: 1})
+    res.send(data)
+    } catch (error) {
+        res.send(error)
+    }
+})
+
+
+productroute.get("/search/:id",async(req,res)=>{
+    const ID= req.params.id
+    try {
+       const data= await productModel.find({title:{$regex:`${ID}`}})
+    res.send(data)
+    } catch (error) {   
+        res.send(error)
+    }
+})
+
+
 module.exports={
     productroute
 }
