@@ -5,6 +5,8 @@
     display: flex;
     width: 90%;
     margin: auto;
+    /* position: sticky; */
+    /* top:10px */
 }
 
 #logo>a>img {
@@ -22,6 +24,14 @@
 }
 
 #search {
+    position: relative;
+    width: 300px;
+    margin: 13px 0px 0px 25px;
+    border: none;
+    border-bottom: 2px solid red;
+}
+
+#searchs {
     position: relative;
     width: 300px;
     margin: 13px 0px 0px 25px;
@@ -72,15 +82,15 @@
     border-radius: 4px;
     height: 42px;
     margin-left: 80px;
-    width: 120px;
+    width: 100px;
 }
 
 #cart>div>img {
     width: 22px;
-    margin-bottom: 16px;
+    margin-bottom: 22px;
     margin-left: 10px;
     height: 22px;
-    margin-top: 14px;
+    margin-top: 8px;
 }
 
 #price {

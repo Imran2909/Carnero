@@ -7,7 +7,7 @@ const authentication=(req,res,next)=>{
         jwt.verify(token, 'imran', (err, decoded)=> {
             if(decoded){
                 req.body.user=decoded.userId
-                // localStorage.setItem("email",req.body.email)
+                console.log(decoded)
                 next()
             }   
             else{

@@ -1,15 +1,60 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Cornero</title>
     <link rel="stylesheet" href="../CSS Files/index.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link rel="stylesheet" href="/CSS Files/login.css">
+    <link rel="stylesheet" href="../CSS Files/product.css">
+    <style>
+        #total {
+            /* border: 1px solid red; */
+            height: 100px;
+            width: 56%;
+            margin: auto;
+            margin-bottom: 40px;
+            margin-top: -20px;
+            position: sticky;
+            top: 20px;
+            border-radius: 20px;
+            background-color: rgba(255, 255, 255, 0.089);
+            display: flex;
+            justify-content: space-evenly;
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+        }
+
+        #total>h5 {
+            margin-top: 35px;
+        }
+
+        #total>button {
+            font-size: 21px;
+            text-transform: uppercase;
+            color: #fff;
+            border: none;
+            padding: 10px 12px;
+            cursor: pointer;
+            font-weight: 600;
+            border-radius: 5px;
+            background-color: rgb(201, 5, 5);
+            height: 56px;
+            width: 300px;
+            display: block;
+            margin-top: 20px;
+        }
+        #cost{
+            color: red;
+        }
+
+        #qty {
+            margin: -25px 0px 0px 140px;
+            color: rgb(255, 0, 0);
+            font-weight: 600;
+        }
+    </style>
 </head>
 
 <body>
@@ -46,48 +91,41 @@
         </div>
         <div id="name">
             <img src="https://www.licious.in/img/rebranding/profile_icon.svg" alt="">
-            <p id="psc">SignUp/Login</p>
+            <p id="pes"> SignUp/Login</p>
         </div>
         <div id="cart">
             <div>
                 <img src="https://www.licious.in/img/rebranding/cart_icon.svg" alt="">
-                <p id="car" >Cart</p>
+                <p id="car" style="margin-top: 6px;">Cart</p>
                 <p id="price"></p>
             </div>
         </div>
     </div>
 
-    <div id="box">
 
-        <!-- <img src="https://thumbs.dreamstime.com/z/carnivore-protein-diet-background-carnivore-diet-background-non-vegan-protein-sources-different-meat-food-chicken-breast-pork-156480791.jpg" alt=""> -->
+    <div id="funs" style="margin-bottom: 60px;">
+        <!-- <div id="top">
+            <select name="Sort" id="sort">
+                <option value="lowtohi">Sort By Price</option>
+                <option value="lowtohi">Price:- Low to High</option>
+                <option value="lowtohi">Price:- High to Low</option>
+            </select>
+        </div> -->
+    </div>
 
-        <div id="data">
-            <h4>Sign Up </h4>
-            <form action="" id="form">
-                <input type="text" placeholder="Please Enter Your Name" id="nmae"><br><br>
-                <input type="text" placeholder="Please Enter Your Number" id="number"><br><br>
-                <input type="email" placeholder="Please Enter Your Email" id="email"><br><br>
-                <input type="text" placeholder="Please Enter Your Password" id="pass"><br><br>
-                <button type="submit" id="butn">Sign Up</button>
-                <p>Already have an acoount <a href="" id="swap">Login</a></p>
-            </form>
-        </div>
-        <div id="login">
-            <h4>Log In </h4>
-            <form action="" id="form">
-                <input type="email" placeholder="Please Enter Your Email" id="emails"><br><br>
-                <input type="text" placeholder="Please Enter Your Password" id="pass"><br><br>
-                <button type="submit" id="secs">Log In</button>
-                <p> Have to Sign Up Go to  <a href="" id="swap">Sign Up</a></p>
-            </form>
-        </div>
+    <div id="total">
+        <h5>Total Payable Amount  :- ₹ <span id="cost"></span></h5>
+        <button id="nmo"> Proceed To Payment</button>
+    </div>
+
+    <div id="cont">
 
     </div>
 
     <div id="footer">
         <div id="ety">
             <div id="llogo">
-                <a href="index.html"><img style="width: 130px;" src="/Carnero.png" alt=""></a>
+                <img id="fotimg" src="/Carnero.png" alt="">
                 <hr id="line">
             </div>
             <div id="links">
@@ -184,19 +222,101 @@
         </div>
     </div>
 
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
-        crossorigin="anonymous"></script>
 </body>
 
 </html>
-<script src="/JS Files/login.js"></script>
+
 <script>
-    document.getElementById("secs").addEventListener("click",async(re)=>{
-        re.preventDefault()
-        let val= await document.getElementById("emails").value;
-        localStorage.setItem("mel",val)
-        window.location.assign("Home.html")
-    })
+    let payload = {
+        user: localStorage.getItem("mel")
+    }
+
+    fetch("http://localhost:2020/cartes/items", {
+        method: "POST",
+        headers: { "Content-type": "application/json" },
+        body: JSON.stringify(payload)
+    }).then(resv => resv.json())
+        .then(pes =>
+            displayData(pes)
+        ).catch(error => console.log(error))
+
+    let total = 0
+
+    function displayData(pes) {
+        pes.forEach((elem) => {
+            let count = 1
+            let phrase = elem.price
+            let reg = /\d+/g
+            let nmc = phrase.match(reg)
+            nmc = +nmc
+            total = total + nmc
+            document.getElementById("cost").innerText = total
+            let main = document.createElement("div")
+            let img = document.createElement("img")
+            img.src = elem.image
+            let name = document.createElement("h6")
+            name.innerText = elem.title
+            let desc = document.createElement("p")
+            desc.setAttribute("id", "fsp")
+            desc.innerText = elem.specification
+            let qty = document.createElement("p")
+            qty.setAttribute("id", "secp")
+            qty.innerText = elem.qty
+            let pric = document.createElement("h5")
+            pric.innerText = `MRP: ${elem.price}`
+            let qnty = document.createElement("p")
+            qnty.innerText = `Qty: ${count}`
+            qnty.setAttribute("id", "qty")
+            let but1 = document.createElement("button")
+            but1.setAttribute("id", "but1")
+            but1.addEventListener("click", () => {
+                // alert("OK")
+                count = count + 1
+                qnty.innerText = `Qty: ${count}`
+
+                let phrase = elem.price
+                let reg = /\d+/g
+                let nmc = phrase.match(reg)
+                nmc = +nmc
+                total = total + nmc
+                document.getElementById("cost").innerText = total
+
+            })
+            but1.style.width = "40px"
+            but1.style.margin = "-30px 40px 0px 230px"
+            but1.innerText = "+"
+            let but2 = document.createElement("button")
+            but2.style.width = "40px"
+            but2.addEventListener("click", () => {
+                // alert("OK")
+                count = count - 1
+                qnty.innerText = `Qty: ${count}`
+
+                let phrase = elem.price
+                let reg = /\d+/g
+                let nmc = phrase.match(reg)
+                nmc = +nmc
+                total = total - nmc
+                document.getElementById("cost").innerText = total
+
+            })
+            but2.style.margin = "-36px 10px 30px 280px"
+            but2.setAttribute("id", "but2")
+            but2.innerText = "-"
+
+            main.append(img, name, desc, qty, pric, qnty, but1, but2)
+            document.getElementById("cont").append(main)
+
+        })
+    }
+    document.getElementById("pes").innerText = localStorage.getItem("mel")
+    console.log(total)
+    document.getElementById("cost").innerText = localStorage.getItem(total)
+
+     document.getElementById("nmo").addEventListener("click",(erre)=>{
+        erre.preventDefault()
+        window.location.assign("payment.html")
+     })
+    
+
 </script>
