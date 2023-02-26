@@ -1,6 +1,8 @@
 const express = require("express")
 const { connection } = require("./db")
 const { userRoute } = require("./Routes/userroutes")
+const { productroute } = require("./Routes/productroute")
+const { authentication }= require("./Middleware/middleware")
 const cors= require("cors")
 const app = express()
 app.use(cors())
@@ -9,8 +11,12 @@ app.get("/", (req, res) => {
     res.send("Home page")
 })
 
-app.use("/user", userRoute)
+app.use("/prod", productroute)
 app.use(cors())
+
+app.use("/user", userRoute)
+app.use(authentication)
+
 
 app.listen(2020, async () => {
     try {

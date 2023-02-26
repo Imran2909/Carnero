@@ -29,12 +29,12 @@ userRoute.post("/login", async (req, res) => {
     try {
         const usr = await userModel.find({ email })
         if (usr.length > 0) {
-            bcrypt.compare(pass, usr[0].pass, (err, result) => {
+            bcrypt.compare(pass, usr[0].pass, async(err, result) => {
                 if (err) res.end(err)
                 else if (result) {
-                    const token = jwt.sign({ userID: usr[0]._id }, 'imran')
-                    console.log(usr[0]._id)
-                    res.send({ "msg": "User logged in successful", "token": token })
+                    const token = jwt.sign({ userId: usr[0]._id }, 'imran')
+                    // console.log(usr[0]._id)
+                    res.send({ "msg": "User logged in successful", "token": token})
                 }
             });
         }
